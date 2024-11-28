@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<style>
+.container {
+max-width:1200px;width:100%;margin:0 auto;
+height:100vh;
+}
+.btn__primary {
+	display: flex;
+	height: 44px;
+	padding: 10px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 4px;
+	border: 2px solid #FA925A;
+	background: #FA925A;
+}
+.btn__primary:focus, .btn__primary:hover {
+	border: 2px solid #000;
+	background: #000;
+}
+.btn__primary.pd_50 {padding: 12px 50px 12px 50px;}
+.btn__primary .elementor-button-text {
+	color: #000;
+	text-align: center;
+	font-family: "DM Sans";
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+}
+.btn__primary .elementor-button-text:focus,.btn__primary .elementor-button-text:hover {color:#fff;}
+
+
+
+
+#gallery_tab .e-n-tabs-heading .e-n-tab-title span {
+    color: #313131;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#gallery_tab .e-n-tabs-heading .e-n-tab-title span:hover,#gallery_tab .e-n-tabs-heading .e-n-tab-title span:focus{
+    color: #FA925A; 
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+#gallery_tab .e-n-tabs-heading .e-n-tab-title[aria-selected=true] {
+     border-bottom:2px solid #FA925A;
+     padding: 0px 12px;
+     margin: 0;
+}
+#gallery_tab .e-n-tabs-heading .e-n-tab-title[aria-selected=true] span {
+	color: #FA925A;
+	text-align: center;
+	font-family: "DM Sans";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	
+}
+#gallery_tab .e-n-tabs-content .e-n-tabs-heading .e-n-tab-title {
+    display: flex;
+	height: 32px;
+	padding: 2px 14px;
+    margin:29px 0 30px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+    border-radius: 100px;
+	border: 1px solid #E6E7E8;
+    border-radius: 100px;
+}
+
+#gallery_tab .e-n-tabs-content .e-n-tabs-heading .e-n-tab-title span {
+    color: #000;
+	font-family: "DM Sans";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+    border:0;
+}
+#gallery_tab .e-n-tabs-content .e-n-tabs-heading .e-n-tab-title:focus,
+#gallery_tab .e-n-tabs-content .e-n-tabs-heading .e-n-tab-title:hover,
+#gallery_tab .e-n-tabs-content .e-n-tabs-heading .e-n-tab-title[aria-selected=true] {
+	display: flex;
+	height: 32px;
+	padding: 2px 14px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	border-radius: 100px;
+    border-radius: 100px;
+    border: 1px solid  #231C1D;
+    background: #231C1D!important;
+}
+#gallery_tab .e-n-tabs-content .e-n-tabs-heading .e-n-tab-title span:focus,
+#gallery_tab .e-n-tabs-content .e-n-tabs-heading .e-n-tab-title span:hover,
+#gallery_tab .e-n-tabs-content .e-n-tabs-heading .e-n-tab-title[aria-selected=true] span{
+	color:  #fff;
+	font-family: "DM Sans";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing:0.5px;
+	border:0;
+}
+#gallery_tab .e-n-tabs-heading {
+  display: flex;
+  overflow-x: auto; 
+  scroll-behavior: smooth;
+  white-space: nowrap; 
+}
+
+
+#gallery_tab button.scroll-button {
+ color:#848484;
+ font-size: 30px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+ margin: 0 10px;
+ padding: 0;
+ border: 0;
+}
+#gallery_tab button.scroll-button:focus,
+#gallery_tab button.scroll-button:hover{
+    background:transparent;
+    color:#FA925A;
+}
+
+#gallery_tab .scroll-button:disabled {
+  cursor: not-allowed;
+}
+@media (max-width: 767px) {
+	#gallery_tab .e-n-tabs-heading {
+		 -webkit-overflow-scrolling: touch;
+		flex-wrap: nowrap;
+		display: flex;
+		overflow-x: auto; 
+		scroll-behavior: smooth;
+		white-space: nowrap; 
+		align-items: center;
+		align-content: center;
+	}
+
+	#gallery_tab #gallery_tab__1 .e-n-tabs-heading, 
+	#gallery_tab #gallery_tab__2 .e-n-tabs-heading {
+        align-items: center;
+        justify-content: flex-start!important;
+        margin-left: 20px;
+    }
+    #gallery_tab  #gallery_tab__1 .scroll-button.next,
+    #gallery_tab  #gallery_tab__2 .scroll-button.next {
+        order:20;
+    }
+
+}
+</style>
+<body>
+
+<div class="container">
+<div id="gallery_tab">
+	<div id="gallery_tab__1">
+	<div class="elementor-widget-container">
+		<div class="e-n-tabs e-activated">
+			<div class="e-n-tabs-heading" role="tablist" data-page-x="">
+				<button class="e-n-tab-title" aria-selected="true" data-tab-index="1" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 1</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="2" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 2</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="3" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 3</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="4" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 4</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="5" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 5</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="6" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 6</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="7" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 7</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="8" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 8</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="9" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 9</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="10" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 10</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="11" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 11</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="12" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 12</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="13" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 13</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="14" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 14</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="15" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 15</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="16" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 16</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="17" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 17</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="18" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 18</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="19" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 19</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="20" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 20</span></button>
+			</div>	
+		</div>
+		</div>
+	</div>
+	<div 	id="gallery_tab__2">
+	<div class="elementor-widget-container">
+		<div class="e-n-tabs e-activated">
+			<div class="e-n-tabs-heading" role="tablist" data-page-x="">
+				<button class="e-n-tab-title" aria-selected="true" data-tab-index="1" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 1</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="2" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 2</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="3" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 3</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="4" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 4</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="5" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 5</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="6" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 6</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="7" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 7</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="8" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 8</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="9" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 9</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="10" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 10</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="11" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 11</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="12" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 12</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="13" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 13</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="14" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 14</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="15" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 15</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="16" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 16</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="17" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 17</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="18" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 18</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="19" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 19</span></button>
+				<button class="e-n-tab-title" aria-selected="false" data-tab-index="20" role="tab" tabindex="0" ><span class="e-n-tab-title-text">Tab 20</span></button>
+			</div>	
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const initTabScroll = (containerId) => {
+    const container = document.querySelector(`#${containerId} .elementor-widget-container`);
+    if (!container) {
+      console.error(`Container không tồn tại: ${containerId}`);
+      return;
+    }
+
+    const tabsHeading = container.querySelector(".e-n-tabs-heading");
+    if (!tabsHeading) {
+      console.error(`Tabs heading không tồn tại trong: ${containerId}`);
+      return;
+    }
+
+    // Tạo nút |<| và |>| cho cuộn tab
+    const createScrollButton = (direction) => {
+      const button = document.createElement("button");
+      button.classList.add("scroll-button", direction === "prev" ? "prev" : "next");
+      button.innerHTML = direction === "prev" ? "<" : ">";
+      button.setAttribute("aria-label", direction === "prev" ? "Cuộn sang trái" : "Cuộn sang phải");
+      return button;
+    };
+
+    // Tạo nút cuộn
+    const prevButton = createScrollButton("prev");
+    const nextButton = createScrollButton("next");
+
+    // Chèn nút vào bên trong .e-n-tabs-heading
+    tabsHeading.prepend(prevButton);  // Thêm nút |<| vào trước
+    tabsHeading.appendChild(nextButton);  // Thêm nút |>| vào sau
+
+    // Hàm cập nhật trạng thái nút cuộn
+    const updateButtons = () => {
+      const scrollLeft = tabsHeading.scrollLeft;
+      const scrollWidth = tabsHeading.scrollWidth;
+      const offsetWidth = tabsHeading.offsetWidth;
+
+      prevButton.disabled = scrollLeft === 0; // Nếu không cuộn được về trái
+      nextButton.disabled = scrollLeft + offsetWidth >= scrollWidth; // Nếu không cuộn được về phải
+    };
+
+    // Hàm để cuộn các tab
+    const scrollTabs = (direction) => {
+      const tabWidth = tabsHeading.querySelector(".e-n-tab-title").offsetWidth;
+      const tabsPerScroll = window.innerWidth <= 768 ? 3 : 10; // Responsive: 3 tab trên điện thoại, 10 trên desktop
+      const scrollAmount = tabWidth * tabsPerScroll;
+
+      tabsHeading.scrollBy({
+        left: direction === "prev" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    };
+
+    // Thêm sự kiện click cho nút cuộn
+    prevButton.addEventListener("click", () => scrollTabs("prev"));
+    nextButton.addEventListener("click", () => scrollTabs("next"));
+
+    // Theo dõi sự kiện scroll để cập nhật trạng thái của nút
+    tabsHeading.addEventListener("scroll", updateButtons);
+
+    // Cập nhật trạng thái nút lần đầu tiên khi trang được tải
+    updateButtons();
+  };
+
+  // Khởi tạo cho các gallery tabs
+  ["gallery_tab__1", "gallery_tab__2"].forEach(initTabScroll);
+});
+
+</script>
+</html>
